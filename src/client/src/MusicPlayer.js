@@ -5,14 +5,21 @@ import CardMedia from '@mui/material/CardMedia';
 import Stack from '@mui/material/Stack';
 import { Typography } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
-import {
-  ShuffleRoundedIcon,
-  FastRewindRounded,
-  PlayArrowRounded,
-  PauseRounded,
-  FastForwardRounded,
-  LoopRoundedIcon,
-} from '@mui/icons-material';
+// import {
+//   ShuffleRoundedIcon,
+//   FastRewindRounded,
+//   PlayArrowRounded,
+//   PauseRounded,
+//   FastForwardRounded,
+//   LoopRoundedIcon,
+// } from '@mui/icons-material';
+
+import ShuffleRoundedIcon from '@mui/icons-material/ShuffleRounded';
+import FastRewindRounded from '@mui/icons-material/FastRewindRounded';
+import PlayArrowRounded from '@mui/icons-material/PlayArrowRounded';
+import PauseRounded from '@mui/icons-material/PauseRounded';
+import FastForwardRounded from '@mui/icons-material/FastForwardRounded';
+import LoopRoundedIcon from '@mui/icons-material/LoopRounded';
 
 function MusicPlayer() {
   let paused = false;

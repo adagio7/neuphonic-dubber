@@ -1,25 +1,14 @@
 import './App.css';
+import img from './zen.png';
 
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import Stack from '@mui/material/Stack';
 import { Typography } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
-// import {
-//   ShuffleRoundedIcon,
-//   FastRewindRounded,
-//   PlayArrowRounded,
-//   PauseRounded,
-//   FastForwardRounded,
-//   LoopRoundedIcon,
-// } from '@mui/icons-material';
 
-import ShuffleRoundedIcon from '@mui/icons-material/ShuffleRounded';
-import FastRewindRounded from '@mui/icons-material/FastRewindRounded';
 import PlayArrowRounded from '@mui/icons-material/PlayArrowRounded';
 import PauseRounded from '@mui/icons-material/PauseRounded';
-import FastForwardRounded from '@mui/icons-material/FastForwardRounded';
-import LoopRoundedIcon from '@mui/icons-material/LoopRounded';
 
 function MusicPlayer() {
   let paused = false;
@@ -28,10 +17,11 @@ function MusicPlayer() {
   }
 
   return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '25vh' }}>
     <Card
     variant="outlined"
     sx={{  p: 2,
-      width: { xs: '100%', sm: 'auto' },
+      width: { xs: '30%', sm: 'auto' },
       display: 'flex',
       flexDirection: { xs: 'column', sm: 'row' },
       alignItems: 'center',
@@ -43,14 +33,14 @@ function MusicPlayer() {
       width="100"
       height="100"
       alt="Contemplative Reptile album cover"
-      src="/images/contemplative-reptile.jpg"
-      sx={{    width: { xs: '100%', sm: 100 },
+      src={img}
+      sx={{    width: { xs: '30%', sm: 100 },
       }}
     />
     <Stack direction="column" alignItems="center" spacing={1} useFlexGap>
       <div>
         <Typography color="text.primary" fontWeight="semiBold">
-          Contemplative Reptile
+            Zen Garden
         </Typography>
         <Typography
           variant="caption"
@@ -63,12 +53,6 @@ function MusicPlayer() {
         </Typography>
       </div>
       <Stack direction="row" alignItems="center" spacing={1} useFlexGap>
-        <IconButton aria-label="Shuffle" disabled size="small">
-          <ShuffleRoundedIcon fontSize="small" />
-        </IconButton>
-        <IconButton aria-label="Fast rewind" disabled size="small">
-          <FastRewindRounded fontSize="small" />
-        </IconButton>
         <IconButton
           aria-label={paused ? 'Play music' : 'Pause music'}
           onClick={() => setPaused((val) => !val)}
@@ -76,15 +60,10 @@ function MusicPlayer() {
         >
           {paused ? <PlayArrowRounded /> : <PauseRounded />}
         </IconButton>
-        <IconButton aria-label="Fast forward" disabled size="small">
-          <FastForwardRounded fontSize="small" />
-        </IconButton>
-        <IconButton aria-label="Loop music" disabled size="small">
-          <LoopRoundedIcon fontSize="small" />
-        </IconButton>
       </Stack>
     </Stack>
   </Card>
+  </div>
   );
 }
 

@@ -5,8 +5,8 @@ import MusicPlayer from './MusicPlayer';
 function App() {
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="background-container ">
+      <header className="main-content">
         <MusicPlayer />
       </header>
     </div>
